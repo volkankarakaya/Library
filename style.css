@@ -1,0 +1,144 @@
+body{
+    margin: 0px;
+    font-family: "Open Sans", sans-serif;
+    background: #ddd;
+}
+
+#overlay{
+    position: absolute;
+    top:50vh;
+    left: 0px;
+    width: 100vw;
+    height: 0vh;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+    opacity: 0;
+    padding: 60px 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: top 500ms ease-in-out,
+                opacity 500ms ease-in-out,
+                height 0ms ease-in-out 500ms;
+}
+
+#overlay #close-btn{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: 600;
+    cursor:pointer;
+
+}
+
+#overlay h2{
+    font-size: 32px;
+    color: #fff;
+}
+
+#overlay p{
+    font-size: 16px;
+    color: #eee;
+    margin: -15px 0px 30px;
+}
+
+#overlay .form-element{
+    margin: 20px 0px;
+}
+
+#overlay label{
+    display: block;
+    font-size: 17px;
+    color: #eee;
+    margin-bottom: 5px;
+}
+
+#overlay input{
+    width: 100%;
+    padding: 6px;
+    font-size: 17px;
+    border: 2px solid #eee;
+    background: transparent;
+    outline: none;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#overlay button{
+    margin-top: 10px;
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #222;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 64px;
+    padding-left: 16px;
+    background-color: rgb(182, 152, 114);
+    border-bottom: 4px solid #222;
+}
+
+.header button{
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: #fff;
+    color: #222;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    box-shadow: 3px 3px 2px 1px rgba(0,0,0,0.3);
+
+}
+
+body.activeForm #overlay{
+    z-index: 2;
+    opacity: 1;
+    top: 0px;
+    height: 100vh;
+    transition: top 500ms ease-in-out,
+                opacity 500ms ease-in-out,
+                height 500ms ease-in-out 0ms;
+}
+
+.book-container{
+    display: flex;
+    gap: 16px;
+    padding: 32px;
+}
+
+.book-card{
+    border: 4px solid #222;
+    border-radius: 16px;
+    padding: 16px;
+    background: #fff;
+}
+
+.form-container select{
+    padding: 6px 24px;
+    width: 200px;
+    font-size: 17px;
+    border-radius: 8px;
+    border: none;
+}
+
+.edit-btn{
+    padding: 4px 16px;
+    border-radius: 8px;
+}
+
+.remove-btn{
+    padding: 4px 16px;
+    border-radius: 8px;
+}

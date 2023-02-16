@@ -9,6 +9,50 @@
 </head>
 <body>
 
+    <div class="header">
+        <h2>My Reading List</h2>
+        <div class="btn-container">
+            <button id="header-btn" type="button">Add Book</button>
+        </div>
+    </div>
+
+    <div class="book-container">
+        
+
+    </div>
+
+    <div id="overlay">
+        <div class="form-container">
+            <div id="close-btn">&times;</div>
+            <h2>Add a new book</h2>
+            <div class="form-element">
+                <label for="title">Title:</label><input class="form-input" type="text" id="title">
+            </div>
+            <div class="form-element">
+                <label for="author">Author:</label><input class="form-input" type="text" id="author">
+            </div>
+            <div class="form-element">
+                <label for="page">Page:</label><input class="form-input" type="number" id="page">
+            </div>
+            <div class="form-element">
+                <label for="read">Read:</label><select class="form-input" name="read" id="read">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            
+            
+            <div id="add-btn" class="form-element">
+                <button>Add Book</button>
+
+            </div>
+            
+            
+        </div>
+    </div>
+
+
+
 
 
     <script src="./app.js"></script>
