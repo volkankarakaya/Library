@@ -22,20 +22,21 @@
     </div>
 
     <div id="overlay">
-        <div class="form-container">
+        <form class="form-container">
             <div id="close-btn">&times;</div>
             <h2>Add a new book</h2>
+            <div class="error"></div>
             <div class="form-element">
-                <label for="title">Title:</label><input class="form-input" type="text" id="title">
+                <label for="title">Title:</label><input class="form-input" type="text" id="title" required minlength="2" maxlength="30">
             </div>
             <div class="form-element">
-                <label for="author">Author:</label><input class="form-input" type="text" id="author">
+                <label for="author">Author:</label><input class="form-input" type="text" id="author" required minlength="2" maxlength="30">
             </div>
             <div class="form-element">
-                <label for="page">Page:</label><input class="form-input" type="number" id="page">
+                <label for="page">Page:</label><input class="form-input" type="number" id="page" required min="1" maxlength="3000">
             </div>
             <div class="form-element">
-                <label for="read">Read:</label><select class="form-input" name="read" id="read">
+                <label for="read">Read:</label><select class="form-input" name="read" id="read" required>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
@@ -43,12 +44,12 @@
             
             
             <div id="add-btn" class="form-element">
-                <button>Add Book</button>
+                <button type="submit">Add Book</button>
 
             </div>
             
             
-        </div>
+        </form>
     </div>
 
 

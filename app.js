@@ -112,23 +112,6 @@ function updateBook(item){
 
 };
 
-// function updateBooks(){
-//   let htmlString = ''
-//   for(let i=0; i<myLibrary.length; i++){
-//     htmlString += `<div class="book-card">
-//     <p>Title: ${myLibrary[i].title}</p>
-//     <p>Author: ${myLibrary[i].author}</p>
-//     <p>Page: ${myLibrary[i].page}</p>
-//     <p>Read: ${myLibrary[i].read}</p>
-//     <button class="edit-btn">Edit</button>
-//     <button class="remove-btn">Remove</button>
-// </div>`
-
-//   }
-//   bookContainer.innerHTML = htmlString;
-// }
-
-
 
 const removeBtns = document.querySelectorAll(".remove-btn");
 removeBtns.forEach((btn)=>{
@@ -138,3 +121,7 @@ removeBtns.forEach((btn)=>{
   })
 })
 
+
+function validateFormInputs(){
+  
+};
