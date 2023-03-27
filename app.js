@@ -123,5 +123,9 @@ removeBtns.forEach((btn)=>{
 
 
 function validateFormInputs(){
-  
+  let title = document.getElementById("title").value;
+  let author = document.getElementById("author").value;
+  let page = document.getElementById("page").value;
+  let read = document.getElementById("read").value;
+  const inputs = document.querySelectorAll(".form-input");
 };
