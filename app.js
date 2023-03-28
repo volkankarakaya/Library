@@ -1,7 +1,7 @@
 const headerBtn = document.getElementById("header-btn");
 const closeBtn = document.getElementById("close-btn");
 const addBtn = document.getElementById("add-btn");
-
+const myForm = document.querySelector(".form-container")
 
 let bookContainer = document.querySelector(".book-container");
 
@@ -46,7 +46,11 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-addBtn.addEventListener("click", saveBook);
+myForm.addEventListener("submit", function(e){
+ 
+  saveBook()
+  e.preventDefault()
+});
 
 function clearInput(target) {
   if (target.value != "") {
@@ -54,7 +58,7 @@ function clearInput(target) {
   }
 }
 
-function saveBook() {
+function saveBook(e) {
   let title = document.getElementById("title").value;
   let author = document.getElementById("author").value;
   let page = document.getElementById("page").value;
@@ -64,8 +68,8 @@ function saveBook() {
   let bookInstance = new Book(title, author, page, read);
   addBookToLibrary(bookInstance);
   toggleForm();
-  inputs.forEach(clearInput);
   updateBook(bookInstance);
+  inputs.forEach(clearInput);
 }
 
 function updateBook(item){
